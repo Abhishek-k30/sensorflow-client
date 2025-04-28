@@ -38,7 +38,7 @@ const DataViewer = () => {
     setError(null);
     
     try {
-      const res = await axios.get('http://localhost:5000/api/sensors/data', {
+      const res = await axios.get(`https://sensorflow-server.onrender.com/api/sensors/data`, {
         params: { 
           apiKey,
           date: date || undefined

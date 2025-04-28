@@ -31,7 +31,7 @@ const Auth = () => {
         }
 
         try {
-            const res = await axios.post(`${process.env.NEXT_PUBLIC_BE_HOST}:8081/auth/login`, {
+            const res = await axios.post(`https://auth-backend-0f9q.onrender.com/auth/login`, {
                 username,
                 password
             }, { withCredentials: true });
@@ -55,7 +55,7 @@ const Auth = () => {
       }
   
       try {
-          const res = await axios.post(`${process.env.NEXT_PUBLIC_BE_HOST}:8081/auth/signup`, {
+          const res = await axios.post(`https://auth-backend-0f9q.onrender.com/auth/signup`, {
               name,
               email,
               phoneNumber,

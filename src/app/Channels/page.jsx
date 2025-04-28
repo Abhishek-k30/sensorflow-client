@@ -14,7 +14,7 @@ export default function ChannelsPage() {
   // Fetch channels from backend
   const fetchChannels = async () => {
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_BE_HOST}:5001/channels`, { 
+      const res = await axios.get(`https://sensor-server-7aqg.onrender.com/channels`, { 
         withCredentials: true 
       });
       setChannels(res.data.channels || []);
@@ -40,7 +40,7 @@ export default function ChannelsPage() {
       return;
     }
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_BE_HOST}:5001/channels`, {
+      await axios.post(`https://sensor-server-7aqg.onrender.com/channels`, {
         name: newChannel.trim()
       }, { withCredentials: true });
       
@@ -63,7 +63,7 @@ export default function ChannelsPage() {
     }
 
     try {
-      await axios.delete(`${process.env.NEXT_PUBLIC_BE_HOST}:5001/channels/${id}`, { 
+      await axios.delete(`https://sensor-server-7aqg.onrender.com/channels/${id}`, { 
         withCredentials: true 
       });
       await fetchChannels(); // Wait for refresh before showing alert
