@@ -1,7 +1,8 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import Button from "../components/button"; // adjust this if your Button is elsewhere
+import Button from "../components/Button"; // adjust this if your Button is elsewhere
+//import Button from "../components/button";
 
 export default function About() {
   const router = useRouter();
